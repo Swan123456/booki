@@ -1,0 +1,57 @@
+#container {
+	width: 100%;
+	/* max-width: 1400px; */
+	/* Pourquoi quand je met ma largeur maximal ne correspond pas a la maquette ? */
+}
+
+ul {
+	padding: 0;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	display: flex;
+	justify-content: center;
+}
+
+header {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.link-navbar {
+	display: flex;
+}
+
+#logo {
+	width: 61.09px;
+	height: 19px;
+	vertical-align: middle;
+}
+
+nav {
+	display: flex;
+    align-items: center;
+}
+
+nav li:hover:before {
+	/* Comment aligner le trait de surlignement par rapport au texte ? */
+    content: "";
+    position: absolute;
+	justify-items: center;
+    height: 2px;
+    width: 162px;
+    top: 0px;
+    background-color: #0065FC;
+}
+
+nav ul {
+	gap: 67px;
+	display: flex;
+}
+
+nav li {
+	list-style: none;
+}
+
