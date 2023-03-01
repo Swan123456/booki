@@ -13,16 +13,73 @@
 </head>
 <div id="container">
     <header>
-        <img id="logo" src="assets/logo/Booki.png" alt="Logo de l'agence">
-        <nav class="link-navbar">
+        <a href="#"><img id="logo" src="assets/logo/Booki.png" alt="Logo de l'agence"></a>
+        <nav>
 			<ul>
-				<li>Hébergements</li>
-				<li>Activités</li>
+				<li><a class="link-navbar" href="#">Hébergements</a></li>
+				<li><a class="link-navbar" href="#">Activités</a></li>
 			</ul>
 		</nav>
     </header>
     <body>
-        
+        <section id="form-search">
+            <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
+            <p>En plein centre-ville ou en pleine nature</p>
+            <div class="search">Rechercher</div><i class="fa-duotone fa-pencil"></i>
+            <form class="filtres">
+                <h3>Filtres :</h3>
+                <div>
+                  <input type="checkbox" id="economic" name="economic" value="economic">
+                  <label for="economic">Économique</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="family" name="family" value="family">
+                  <label for="family">Familial</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="romantic" name="romantic" value="romantic">
+                  <label for="romantic">Romantique</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="animals-allowed" name="animals-allowed" value="animals-allowed">
+                    <label for="animals-allowed">Animaux autorisés</label>
+                </div>
+            </form>
+            <p>Plus de 500 logements sont disponibles dans cette ville</p>
+        </section>
+        <section id="accommodation-list">
+            <div class="list-in-city">
+                <h2>Hébergements à Marseille</h2>
+                <div class="card-middle"></div>
+                <h3>Afficher plus</h3>
+            </div>
+            <div class="most-popular">
+                <h2>Les plus populaires</h2>
+                <div class="small"></div>
+            </div>
+        </section>
+        <section id="activity-list">
+            <h2>Activités à Marseille</h2>
+            <div class="card-big"></div>
+        </section>
     </body>
+    <footer>
+        <div class="footer-column-left">
+            <h3>À propos</h3>
+            <p>Fonctionnement du site</p>
+            <p>Conditions générales </p>
+            <p>Données et confidentialité</p>
+        </div>
+        <div class="footer-column-center">
+            <h3>Nos hébergements</h3>
+            <p>Charte qualité</p>
+            <p>Proposer votre hôtel</p>
+        </div>
+        <div class="footer-column-right">
+            <h3>Assistance</h3>
+            <p>Centre d’aide</p>
+            <p>Nous contacter</p>
+        </div>
+    </footer>
 </div>
 </html>

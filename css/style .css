@@ -1,7 +1,7 @@
 #container {
 	width: 100%;
-	/* max-width: 1400px; */
-	/* Pourquoi quand je met ma largeur maximal ne correspond pas a la maquette ? */
+	max-width: 1400px;
+	/* Pourquoi quand je met ma largeur maximal ne correspond pas exactement a la maquette ? */
 }
 
 ul {
@@ -16,12 +16,13 @@ body {
 
 header {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 }
 
 .link-navbar {
 	display: flex;
+	text-decoration: none;
 }
 
 #logo {
@@ -49,9 +50,15 @@ nav li:hover:before {
 nav ul {
 	gap: 67px;
 	display: flex;
+	justify-content: space-between;
 }
 
 nav li {
 	list-style: none;
+	display: flex;
+	justify-content: space-around;
 }
 
+.filtres {
+	display: flex;
+}
