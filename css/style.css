@@ -1,7 +1,16 @@
 :root {
-    --main-color: #0065FC;
+	--main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
+}
+
+h2 {
+	font-size: 22px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
 }
 
 .container {
@@ -34,7 +43,6 @@ header {
 
 .link-navbar {
 	display: flex;
-	text-decoration: none;
 	color: black;
 }
 
@@ -186,28 +194,75 @@ button[type="submit"] {
 }
 
 .hebergements {
-    width: 65%;
+	width: 65%;
 }
 
+.hebergement-card {
+	display: grid;
+	grid-template-columns: repeat(3, 250.33px);
+	grid-template-rows: repeat(2, 207.25px);
+	grid-gap: 30px;
+}
+
+.card-title {
+	margin-top: 0;
+	margin-bottom: 0.25rem;
+	font-size: 1.25rem;
+}
+
+.card-subtitle {
+	margin: 0;
+	font-size: 1rem;
+}
 
 .hebergement-card .card {
+	margin-top: 30px;
+	padding: 0px 0px 15px;
+	box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
 	display: flex;
 	flex-direction: column;
-    margin-top: 30px;
-	box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
-	border-radius: 20px;
-	width: 250.33px;
-	padding: 0px 0px 15px;
+	grid-gap: 1rem;
+	width: 100%;
+	height: 100%;
+	color: black;
+	transform: scale(1);
+	transition: transform 0.5s ease;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+  
+.card:hover {
+	transform: scale(1.05);
+	transition: transform 0.5s ease;
 }
 
 .hebergement-card img {
 	border-radius: 20px 20px 0px 0px;
 	border: 5px solid #FFFFFF;
 	align-self: stretch;
+	height: 124px;
 }
 
 .hebergement-card .card-txt {
 	padding-left: 15px;
+}
+
+.card-rating {
+	padding-left: 15px;	
+	color: var(--main-color);
+}
+
+.neutralStar {
+	color: var(--main-bg-color);
+}
+
+.more {
+	margin-top: 70px;
 }
 
 .popular {
@@ -219,7 +274,105 @@ button[type="submit"] {
 	justify-content: space-between;
 	align-items: center;
 }
-	
+
 .iconPopular {
 	color: var(--main-color);
 }
+
+.populars-cards .card {
+    display: flex;
+    margin-top: 33px;
+}
+
+.populars-cards img {
+    width: 33%;
+    height: 134px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.populars-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.populars-cards .card-title {
+	margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.populars-cards .card-subtitle {
+	margin: 0;
+}
+
+.populars-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+.activity-list {
+	padding: 65px 0 0 30px;
+}
+
+.activityListCard {
+	display: flex;
+	gap: 30px;
+	padding-top: 30px;
+}
+
+.activityCard {
+	width: 297.5px;
+	height: 439px;
+	background-color: white;
+	border-radius: 20px;
+	filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+	transform: scale(1);
+	transition: transform 0.5s ease;
+}
+
+.activityCard:hover {
+	transform: scale(1.05);
+	transition: transform 0.5s ease;
+}
+
+.activityCard img {
+	width: 297.5px;
+	height: 380px;
+	border-radius: 20px 20px 0px 0px;
+}
+
+.activity-card-content {
+	display: flex;
+	padding: 0 0 0 19px;
+}
+
+.activity-card-title {
+	vertical-align: middle;
+	font-size: 16px;
+	color: black;
+}
+
+footer {
+	display: flex;
+	width: 100%;
+	background-color: var(--main-bg-color);
+	margin-top: 65px;
+	padding: 20px;
+	bottom: 0;
+	/* regarder pour coller le footer au bas de la page */
+}
+
+.footer-column-left {
+	flex-basis: 33.33%;
+}
+.footer-column-center {
+	flex-basis: 33.33%;
+}
+.footer-column-right {
+	flex-basis: 33.33%;
+}
+
+
