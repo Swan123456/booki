@@ -375,4 +375,21 @@ footer {
 	flex-basis: 33.33%;
 }
 
+@media (max-width: 767.98px) {
 
+}
+
+
+@media (max-width: 1024px) {
+    .hebergements-and-populars {
+		display: block;
+	}
+
+	.populars-cards {
+		display: flex;
+		width: 100%;
+	}
+	.popular {
+		width: auto;
+	}
+}
