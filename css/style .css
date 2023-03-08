@@ -1,4 +1,10 @@
-#container {
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+}
+
+.container {
 	width: 100%;
 	max-width: 1400px;
 	/* Pourquoi quand je met ma largeur maximal ne correspond pas exactement a la maquette ? */
@@ -20,16 +26,22 @@ header {
 	align-items: center;
 }
 
-.link-navbar {
-	display: flex;
-	text-decoration: none;
-}
-
 #logo {
 	width: 61.09px;
 	height: 19px;
 	vertical-align: middle;
 }
+
+.link-navbar {
+	display: flex;
+	text-decoration: none;
+	color: black;
+}
+
+.link-navbar:hover {
+	color: var(--main-color);
+}
+
 
 nav {
 	display: flex;
@@ -37,14 +49,13 @@ nav {
 }
 
 nav li:hover:before {
-	/* Comment aligner le trait de surlignement par rapport au texte ? */
     content: "";
     position: absolute;
 	justify-items: center;
     height: 2px;
     width: 162px;
     top: 0px;
-    background-color: #0065FC;
+    background-color: var(--main-color);
 }
 
 nav ul {
@@ -59,6 +70,156 @@ nav li {
 	justify-content: space-around;
 }
 
+form {
+	display: flex;
+	align-items: center;
+}
+
+.form-city {
+	padding: 35px 0 0 0;
+}
+
 .filtres {
 	display: flex;
+	padding: 50px 0 0 0;
+}
+
+
+.icon_search {
+	background-color: var(--main-bg-color);
+	width: 50px;
+	height: 49px;
+	border-radius: 10px 0 0 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* vérifier au niveau de la taille de l'icone */
+}
+  
+input[type="search"][value] {
+	height: 49px; 
+	border: 0.5px solid var(--main-bg-color);
+	font-weight: 700;
+	font-size: 18px;
+	padding: 24px 24px;
+	text-align: center;
+	/* verifier pour centrer le text comme sur la maquette sois mettre du padding soit mettre en center */
+}
+  
+button[type="submit"] {
+	background-color: var(--main-color);
+	width: 132px;
+	height: 49px;
+	color: white;
+	border: none;
+	border-radius: 0 15px 15px 0;
+	cursor: pointer;
+	font-weight: 700;
+	font-size: 18px;
+}
+
+.checkbox-filter {
+	appearance: none;
+	border: 2px
+}
+
+.buttonFilter {
+	display: flex;
+	border: 2px solid var(--main-bg-color);
+	border-radius: 30px;
+	font-weight: 700;
+	height: 50px;
+	align-items: center;
+	vertical-align: middle;
+	padding: 0 19px 0 21px;
+	margin-left: 20px;
+	/* vérifier si c'est bien un margin-left 20px */
+}
+
+.buttonFilter:hover {
+	background-color: var(--main-color);
+	color: var(--main-bg-color);
+	border: 2px solid var(--main-color);
+}
+
+.buttonFilter:hover .iconFilter {
+    color: white;
+}
+
+.iconFilter {
+	color: var(--main-color);
+}
+
+.info {
+	display: flex;
+	align-items: center;
+}
+
+.circleInfo {
+	width: 24px;
+	height: 24px;
+	border: 2px solid var(--main-bg-color);
+	border-radius: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.iconeInfo {
+	color: var(--main-color);
+}
+
+.textInfo {
+	margin-left: 10px;
+}
+
+.hebergements-and-populars {
+	display: flex;
+	justify-content: space-between;
+}
+
+.hebergements-and-populars section {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.hebergements {
+    width: 65%;
+}
+
+
+.hebergement-card .card {
+	display: flex;
+	flex-direction: column;
+    margin-top: 30px;
+	box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+	border-radius: 20px;
+	width: 250.33px;
+	padding: 0px 0px 15px;
+}
+
+.hebergement-card img {
+	border-radius: 20px 20px 0px 0px;
+	border: 5px solid #FFFFFF;
+	align-self: stretch;
+}
+
+.hebergement-card .card-txt {
+	padding-left: 15px;
+}
+
+.popular {
+	width: 32%;	
+}
+	
+.popularTitle {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+	
+.iconPopular {
+	color: var(--main-color);
 }
