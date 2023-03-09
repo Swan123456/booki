@@ -16,7 +16,10 @@ a {
 .container {
 	width: 100%;
 	max-width: 1400px;
-	/* Pourquoi quand je met ma largeur maximal ne correspond pas exactement a la maquette ? */
+}
+
+.container-body {
+	margin-left: 20px;
 }
 
 ul {
@@ -39,6 +42,7 @@ header {
 	width: 61.09px;
 	height: 19px;
 	vertical-align: middle;
+	margin-top: 30px;
 }
 
 .link-navbar {
@@ -61,7 +65,7 @@ nav li:hover:before {
     position: absolute;
 	justify-items: center;
     height: 2px;
-    width: 162px;
+	width: 7%;
     top: 0px;
     background-color: var(--main-color);
 }
@@ -78,6 +82,10 @@ nav li {
 	justify-content: space-around;
 }
 
+#form-search {
+	margin-top: 64px;
+}
+
 form {
 	display: flex;
 	align-items: center;
@@ -92,6 +100,9 @@ form {
 	padding: 50px 0 0 0;
 }
 
+.optionFilter {
+	display: flex;
+}
 
 .icon_search {
 	background-color: var(--main-bg-color);
@@ -101,7 +112,10 @@ form {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/* vérifier au niveau de la taille de l'icone */
+}
+
+.icon-map {
+	font-size: 19px;
 }
   
 input[type="search"][value] {
@@ -109,11 +123,9 @@ input[type="search"][value] {
 	border: 0.5px solid var(--main-bg-color);
 	font-weight: 700;
 	font-size: 18px;
-	padding: 24px 24px;
 	text-align: center;
-	/* verifier pour centrer le text comme sur la maquette sois mettre du padding soit mettre en center */
 }
-  
+
 button[type="submit"] {
 	background-color: var(--main-color);
 	width: 132px;
@@ -141,7 +153,6 @@ button[type="submit"] {
 	vertical-align: middle;
 	padding: 0 19px 0 21px;
 	margin-left: 20px;
-	/* vérifier si c'est bien un margin-left 20px */
 }
 
 .buttonFilter:hover {
@@ -175,6 +186,7 @@ button[type="submit"] {
 
 .iconeInfo {
 	color: var(--main-color);
+	font-size: 10px;
 }
 
 .textInfo {
@@ -184,6 +196,7 @@ button[type="submit"] {
 .hebergements-and-populars {
 	display: flex;
 	justify-content: space-between;
+	gap: 40px;
 }
 
 .hebergements-and-populars section {
@@ -194,7 +207,7 @@ button[type="submit"] {
 }
 
 .hebergements {
-	width: 65%;
+	width: 924px;
 }
 
 .hebergement-card {
@@ -207,12 +220,12 @@ button[type="submit"] {
 .card-title {
 	margin-top: 0;
 	margin-bottom: 0.25rem;
-	font-size: 1.25rem;
+	font-size: 16px;
 }
 
 .card-subtitle {
 	margin: 0;
-	font-size: 1rem;
+	font-size: 14px;
 }
 
 .hebergement-card .card {
@@ -246,6 +259,8 @@ button[type="submit"] {
 	border: 5px solid #FFFFFF;
 	align-self: stretch;
 	height: 124px;
+	object-fit: cover; 
+	overflow: hidden;
 }
 
 .hebergement-card .card-txt {
@@ -266,7 +281,7 @@ button[type="submit"] {
 }
 
 .popular {
-	width: 32%;	
+	width: 429px;
 }
 	
 .popularTitle {
@@ -282,6 +297,7 @@ button[type="submit"] {
 .populars-cards .card {
     display: flex;
     margin-top: 33px;
+	width: 369px;
 }
 
 .populars-cards img {
@@ -289,6 +305,7 @@ button[type="submit"] {
     height: 134px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+	object-fit: cover; 
 }
 
 .populars-cards .card-content {
@@ -342,6 +359,7 @@ button[type="submit"] {
 	width: 297.5px;
 	height: 380px;
 	border-radius: 20px 20px 0px 0px;
+	object-fit: cover; 
 }
 
 .activity-card-content {
@@ -357,12 +375,10 @@ button[type="submit"] {
 
 footer {
 	display: flex;
-	width: 100%;
 	background-color: var(--main-bg-color);
 	margin-top: 65px;
 	padding: 20px;
 	bottom: 0;
-	/* regarder pour coller le footer au bas de la page */
 }
 
 .footer-column-left {
@@ -375,21 +391,143 @@ footer {
 	flex-basis: 33.33%;
 }
 
-@media (max-width: 767.98px) {
-
-}
-
-
 @media (max-width: 1024px) {
+
+	.filtres {
+		display: block;
+	}
+	
+	.buttonFilter {
+		margin-left: 0;
+		margin-right: 20px;
+	}
+
     .hebergements-and-populars {
 		display: block;
 	}
 
+	.hebergement-card {
+		grid-template-columns: repeat(3, 268px);
+	}
+	
+	.popular {
+		width: 924px;
+		margin-top: 20px;
+	}
+	
 	.populars-cards {
 		display: flex;
 		width: 100%;
 	}
+	
+	.populars-cards .card {
+		width: 274px;
+		margin-right: 20px;
+	}
+	
+	.activityCard {
+		width: 193.5px;
+		height: 270px;
+	}
+	
+	.activityCard img {
+		width: 193.5px;
+		height: 200px;
+	}
+	
+	/* .img1 {
+		content: url('../assets/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg');
+	} */
+}
+
+@media (max-width: 768px) {
+
+	.container header {
+		display: block;
+		text-align: center;
+	}
+
+	.link-navbar {
+		margin-top: 30px;
+	}
+
+	nav li:hover:before {
+		content: "";
+		position: absolute;
+		justify-items: center;
+		height: 2px;
+		width: 50%;
+		top: 145px;
+		background-color: var(--main-color);
+	}
+
+	nav ul {
+		justify-content: space-around;
+		width: 100%;
+	}
+
+	nav li:before {
+	content: "";
+	position: absolute;
+	justify-items: center;
+	height: 2px;
+	width: 58%;
+	top: 145px;
+	background-color: var(--main-bg-color);
+	}
+
+	input[type="search"][value] {
+		height: 49px; 
+		border: 0.5px solid var(--main-bg-color);
+		font-weight: 700;
+		font-size: 18px;
+		text-align: center;
+	}
+
+	button[type="submit"] {
+		width: 49px;
+		border-radius: 15px 15px 15px 15px;
+		margin-left: -20px;
+	}
+
+	button[type="submit"]::before {
+		content: "\f002";
+		font-family: "Font Awesome 5 Free";
+	}
+
+	button[type="submit"] span {
+		display: none;
+	}
+
+	.optionFilter {
+		display: grid;
+		grid-template-columns: repeat(2, 210px);
+		grid-template-rows: repeat(2, 70px);
+	}
+	
+	.hebergement-card {
+		grid-template-columns: repeat(1, 335px);
+	}
+
+	.hebergements {
+		width: 0;
+		background-color: none;
+	}
+
+	.populars-cards {
+		display: block;
+	}
+
 	.popular {
-		width: auto;
+		width: 0;
+		background-color: none;
+	}
+
+	.activityListCard {
+		display: block;
+	}
+
+	footer {
+		display: block;
 	}
 }
