@@ -19,7 +19,7 @@ a {
 }
 
 .container-body {
-	margin-left: 20px;
+	/* margin-left: 20px; */
 }
 
 ul {
@@ -153,6 +153,7 @@ button[type="submit"] {
 	vertical-align: middle;
 	padding: 0 19px 0 21px;
 	margin-left: 20px;
+	gap: 5px;
 }
 
 .buttonFilter:hover {
@@ -501,8 +502,9 @@ footer {
 
 	.optionFilter {
 		display: grid;
-		grid-template-columns: repeat(2, 210px);
+		grid-template-columns: repeat(2, 50%);
 		grid-template-rows: repeat(2, 70px);
+		font-size: 14px;
 	}
 	
 	.hebergement-card {
@@ -511,16 +513,22 @@ footer {
 
 	.hebergements {
 		width: 0;
-		background-color: none;
 	}
 
 	.populars-cards {
 		display: block;
 	}
 
+	.populars-cards .card {
+		width: 100%;
+	}
 	.popular {
 		width: 0;
-		background-color: none;
+		background-color: white;
+		/* pourquoi ça ne m'enleve pas mon background ? */
+	}
+	.activity-list {
+		padding: 65px 0 0 0px;
 	}
 
 	.activityListCard {
@@ -530,4 +538,44 @@ footer {
 	footer {
 		display: block;
 	}
+
+	.hebergements-and-populars section {
+		margin-left: -5%;
+		width: 108%;
+		border-radius: 0px;
+		padding-bottom: 105px;
+	}
+
+	.more {
+		display: none;
+	}
+
+	.activityCard img {
+		width: 100%;
+	}
+	
+	.activityCard {
+		display: block;
+		width: 96%;
+		margin-bottom: 15px;
+	}
+
+	footer {
+		margin-left: -10px;
+		width: 100%;
+	}
+
+	.footer-column-left {
+		padding-bottom: 50px;
+	}
+
+	.footer-column-center {
+		padding-bottom: 50px;
+	}
+
+	.footer-column-right {
+		padding-bottom: 50px;
+	}
+
+
 }
