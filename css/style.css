@@ -19,7 +19,7 @@ a {
 }
 
 .container-body {
-	/* margin-left: 20px; */
+	margin-left: 20px;
 }
 
 ul {
@@ -198,6 +198,7 @@ button[type="submit"] {
 	display: flex;
 	justify-content: space-between;
 	gap: 40px;
+	width: 100%;
 }
 
 .hebergements-and-populars section {
@@ -509,6 +510,7 @@ footer {
 	
 	.hebergement-card {
 		grid-template-columns: repeat(1, 335px);
+	justify-content: center;
 	}
 
 	.hebergements {
@@ -520,7 +522,7 @@ footer {
 	}
 
 	.populars-cards .card {
-		width: 100%;
+		width: 95%;
 	}
 	.popular {
 		width: 0;
@@ -541,7 +543,7 @@ footer {
 
 	.hebergements-and-populars section {
 		margin-left: -5%;
-		width: 108%;
+		width: 110%;
 		border-radius: 0px;
 		padding-bottom: 105px;
 	}
@@ -577,5 +579,9 @@ footer {
 		padding-bottom: 50px;
 	}
 
+	body {
+		width: fit-content;
+		margin: auto;
+	}
 
 }
