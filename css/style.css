@@ -19,7 +19,7 @@ a {
 }
 
 .container-body {
-	margin-left: 20px;
+	margin: 0px 50px 0px 50px;
 }
 
 ul {
@@ -32,6 +32,7 @@ body {
 	justify-content: center;
 }
 
+/* navbar */
 header {
 	display: flex;
 	justify-content: space-between;
@@ -53,7 +54,6 @@ header {
 .link-navbar:hover {
 	color: var(--main-color);
 }
-
 
 nav {
 	display: flex;
@@ -81,6 +81,42 @@ nav li {
 	display: flex;
 	justify-content: space-around;
 }
+
+/* card */
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+  
+.card:hover {
+	transform: scale(1.05);
+	transition: transform 0.5s ease;
+}
+
+.card-title {
+	margin-top: 0;
+	margin-bottom: 0.25rem;
+	font-size: 16px;
+}
+
+.card-subtitle {
+	margin: 0;
+	font-size: 14px;
+}
+
+.card-rating {
+	padding-left: 15px;	
+	color: var(--main-color);
+}
+
+.neutralStar {
+	color: var(--main-bg-color);
+}
+
+/* filtres */
 
 #form-search {
 	margin-top: 64px;
@@ -194,6 +230,8 @@ button[type="submit"] {
 	margin-left: 10px;
 }
 
+/* section hebergement en fonction de la ville et les plus populaires */
+
 .hebergements-and-populars {
 	display: flex;
 	justify-content: space-between;
@@ -208,6 +246,8 @@ button[type="submit"] {
     box-sizing: border-box;
 }
 
+/* hebergement */
+
 .hebergements {
 	width: 924px;
 }
@@ -217,17 +257,6 @@ button[type="submit"] {
 	grid-template-columns: repeat(3, 250.33px);
 	grid-template-rows: repeat(2, 207.25px);
 	grid-gap: 30px;
-}
-
-.card-title {
-	margin-top: 0;
-	margin-bottom: 0.25rem;
-	font-size: 16px;
-}
-
-.card-subtitle {
-	margin: 0;
-	font-size: 14px;
 }
 
 .hebergement-card .card {
@@ -244,18 +273,6 @@ button[type="submit"] {
 	transition: transform 0.5s ease;
 }
 
-.card {
-    background-color: white;
-    border-radius: 20px;
-    padding: 5px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-}
-  
-.card:hover {
-	transform: scale(1.05);
-	transition: transform 0.5s ease;
-}
-
 .hebergement-card img {
 	border-radius: 20px 20px 0px 0px;
 	border: 5px solid #FFFFFF;
@@ -267,15 +284,6 @@ button[type="submit"] {
 
 .hebergement-card .card-txt {
 	padding-left: 15px;
-}
-
-.card-rating {
-	padding-left: 15px;	
-	color: var(--main-color);
-}
-
-.neutralStar {
-	color: var(--main-bg-color);
 }
 
 .more {
@@ -375,6 +383,8 @@ button[type="submit"] {
 	color: black;
 }
 
+/* footer */
+
 footer {
 	display: flex;
 	background-color: var(--main-bg-color);
@@ -393,6 +403,10 @@ footer {
 	flex-basis: 33.33%;
 }
 
+/* responsive */
+
+/* tablette */
+
 @media (max-width: 1024px) {
 
 	.filtres {
@@ -405,7 +419,7 @@ footer {
 	}
 
     .hebergements-and-populars {
-		display: block;
+		flex-direction: column;
 	}
 
 	.hebergement-card {
@@ -442,11 +456,17 @@ footer {
 	} */
 }
 
+/* mobile */
+
 @media (max-width: 768px) {
 
 	.container header {
 		display: block;
 		text-align: center;
+	}
+
+	.container-body {
+		margin: 0px 20px 0px 20px;
 	}
 
 	.link-navbar {
@@ -478,7 +498,12 @@ footer {
 	background-color: var(--main-bg-color);
 	}
 
+	.form-city {
+		justify-content: center;
+	}
+
 	input[type="search"][value] {
+		width: 80%;
 		height: 49px; 
 		border: 0.5px solid var(--main-bg-color);
 		font-weight: 700;
@@ -510,11 +535,12 @@ footer {
 	
 	.hebergement-card {
 		grid-template-columns: repeat(1, 335px);
-	justify-content: center;
+		justify-content: center;
 	}
 
 	.hebergements {
 		width: 0;
+		order: 2;
 	}
 
 	.populars-cards {
@@ -527,7 +553,7 @@ footer {
 	.popular {
 		width: 0;
 		background-color: white;
-		/* pourquoi ça ne m'enleve pas mon background ? */
+		order: 1;
 	}
 	.activity-list {
 		padding: 65px 0 0 0px;
