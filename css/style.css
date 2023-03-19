@@ -542,6 +542,10 @@ footer {
 		width: 0;
 		order: 2;
 	}
+	
+	#hebergements {
+		background-color: white;
+	}
 
 	.populars-cards {
 		display: block;
@@ -572,10 +576,6 @@ footer {
 		width: 110%;
 		border-radius: 0px;
 		padding-bottom: 105px;
-	}
-
-	.more {
-		display: none;
 	}
 
 	.activityCard img {
